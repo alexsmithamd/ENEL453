@@ -1,0 +1,11 @@
+Time resolution is 1 ps
+Time = 0: switches_inputs = 0000000000000000, led = 0000000000000000
+Time = 12000082000: switches_inputs = 0001000000000000, led = 0001000000000000
+Time = 24000102000: switches_inputs = 0101010101010101, led = 0101010101010101
+Time = 36000122000: switches_inputs = 0000101010011001, led = 0000101010011001
+Time = 48000142000: switches_inputs = 1010101010101010, led = 1010101010101010
+Time = 60000162000: switches_inputs = 0000000001011111, led = 0000000001011111
+Time = 72000182000: switches_inputs = 0010011100001111, led = 0010011100001111
+Time = 84000202000: switches_inputs = 0010011100010000, led = 0010011100010000
+$stop called at time : 108000222 ns : File "C:/Users/alexs/Desktop/2026-2027/453/ENEL453/lab2/lab2_smith.srcs/sim_1/imports/lab2/lab_2_top_level_tb.sv" Line 147
+INFO: xsimkernel Simulation Memory Usage: 20244 KB (Peak: 20244 KB), Simulation CPU Usage: 10890 ms

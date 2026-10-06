@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/alexs/Desktop/2026-2027/453/ENEL453/lab2/mux.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/alexs/Desktop/2026-2027/453/ENEL453/lab2/mux_tb1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_tb1
