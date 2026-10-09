@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="lab_3_top_level_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="lab_3_top_level_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="9.212001 us"></ZoomEndTime>
+      <Cursor1Time time="7.701517 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="192"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="29" />
+   <wvobject fp_name="/lab_3_top_level_tb/switches_inputs" type="array">
+      <obj_property name="ElementShortName">switches_inputs[15:0]</obj_property>
+      <obj_property name="ObjectShortName">switches_inputs[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/uut/MUX/display_outputs" type="array">
+      <obj_property name="ElementShortName">display_outputs[15:0]</obj_property>
+      <obj_property name="ObjectShortName">display_outputs[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/uut/bcd_outputs" type="array">
+      <obj_property name="ElementShortName">bcd_outputs[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bcd_outputs[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/uut/bcd_reg" type="array">
+      <obj_property name="ElementShortName">bcd_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bcd_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/uut/reg_outputs" type="array">
+      <obj_property name="ElementShortName">reg_outputs[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_outputs[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/uut/switches_outputs" type="array">
+      <obj_property name="ElementShortName">switches_outputs[15:0]</obj_property>
+      <obj_property name="ObjectShortName">switches_outputs[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/uut/display_outputs" type="array">
+      <obj_property name="ElementShortName">display_outputs[15:0]</obj_property>
+      <obj_property name="ObjectShortName">display_outputs[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/led" type="array">
+      <obj_property name="ElementShortName">led[15:0]</obj_property>
+      <obj_property name="ObjectShortName">led[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/source_select" type="logic">
+      <obj_property name="ElementShortName">source_select</obj_property>
+      <obj_property name="ObjectShortName">source_select</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/select" type="logic">
+      <obj_property name="ElementShortName">select</obj_property>
+      <obj_property name="ObjectShortName">select</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/store" type="logic">
+      <obj_property name="ElementShortName">store</obj_property>
+      <obj_property name="ObjectShortName">store</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/an1" type="logic">
+      <obj_property name="ElementShortName">an1</obj_property>
+      <obj_property name="ObjectShortName">an1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/an2" type="logic">
+      <obj_property name="ElementShortName">an2</obj_property>
+      <obj_property name="ObjectShortName">an2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/an3" type="logic">
+      <obj_property name="ElementShortName">an3</obj_property>
+      <obj_property name="ObjectShortName">an3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/an4" type="logic">
+      <obj_property name="ElementShortName">an4</obj_property>
+      <obj_property name="ObjectShortName">an4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/ca" type="logic">
+      <obj_property name="ElementShortName">ca</obj_property>
+      <obj_property name="ObjectShortName">ca</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/cb" type="logic">
+      <obj_property name="ElementShortName">cb</obj_property>
+      <obj_property name="ObjectShortName">cb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/cc" type="logic">
+      <obj_property name="ElementShortName">cc</obj_property>
+      <obj_property name="ObjectShortName">cc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/cd" type="logic">
+      <obj_property name="ElementShortName">cd</obj_property>
+      <obj_property name="ObjectShortName">cd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/ce" type="logic">
+      <obj_property name="ElementShortName">ce</obj_property>
+      <obj_property name="ObjectShortName">ce</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/cf" type="logic">
+      <obj_property name="ElementShortName">cf</obj_property>
+      <obj_property name="ObjectShortName">cf</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/cg" type="logic">
+      <obj_property name="ElementShortName">cg</obj_property>
+      <obj_property name="ObjectShortName">cg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/dp" type="logic">
+      <obj_property name="ElementShortName">dp</obj_property>
+      <obj_property name="ObjectShortName">dp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/CLK_PERIOD" type="array">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/CLK_QUARTER" type="array">
+      <obj_property name="ElementShortName">CLK_QUARTER[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_QUARTER[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/RESET_DUR" type="array">
+      <obj_property name="ElementShortName">RESET_DUR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RESET_DUR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/lab_3_top_level_tb/CONVERSION_TIME" type="array">
+      <obj_property name="ElementShortName">CONVERSION_TIME[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CONVERSION_TIME[31:0]</obj_property>
+   </wvobject>
+</wave_config>
