@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Fri Oct  9 00:58:35 2026
+| Date         : Fri Oct  9 10:33:54 2026
 | Host         : TheLaptop running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file lab_3_top_level_control_sets_placed.rpt
 | Design       : lab_3_top_level
@@ -73,16 +73,16 @@ Table of Contents
 +----------------+---------------------------------+--------------------+------------------+----------------+--------------+
 |  Clock Signal  |          Enable Signal          |  Set/Reset Signal  | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+---------------------------------+--------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG | BIN_STORED/bcd_out[12]_i_1_n_0  | regi/SR[0]         |                1 |              4 |         4.00 |
 |  clk_IBUF_BUFG | BIN_LIVE/p_1_in                 | SYNCHRONIZER/SR[0] |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG |                                 | SYNCHRONIZER/SR[0] |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | BIN_STORED/bcd_out[12]_i_1_n_0  | regi/SR[0]         |                1 |              4 |         4.00 |
 |  clk_IBUF_BUFG |                                 | regi/SR[0]         |                2 |              5 |         2.50 |
-|  clk_IBUF_BUFG | BIN_STORED/bcd_out[15]_i_1_n_0  | reset_IBUF         |                5 |             12 |         2.40 |
+|  clk_IBUF_BUFG |                                 | SYNCHRONIZER/SR[0] |                1 |              5 |         5.00 |
 |  clk_IBUF_BUFG | BIN_LIVE/bcd_out[15]_i_1_n_0    | reset_IBUF         |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG | BIN_STORED/bcd_out[15]_i_1_n_0  | reset_IBUF         |                5 |             12 |         2.40 |
 |  clk_IBUF_BUFG | store_IBUF                      | reset_IBUF         |                5 |             16 |         3.20 |
 |  clk_IBUF_BUFG |                                 | reset_IBUF         |                7 |             20 |         2.86 |
-|  clk_IBUF_BUFG | BIN_STORED/scratch[31]_i_1_n_0  | regi/SR[0]         |                7 |             32 |         4.57 |
 |  clk_IBUF_BUFG | BIN_LIVE/scratch[31]_i_1__0_n_0 | SYNCHRONIZER/SR[0] |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG | BIN_STORED/scratch[31]_i_1_n_0  | regi/SR[0]         |                7 |             32 |         4.57 |
 |  clk_IBUF_BUFG |                                 |                    |               17 |             49 |         2.88 |
 +----------------+---------------------------------+--------------------+------------------+----------------+--------------+
 

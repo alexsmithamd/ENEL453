@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Fri Oct  9 00:59:10 2026
-# Process ID         : 36068
+# Start of session at: Fri Oct  9 10:33:31 2026
+# Process ID         : 5316
 # Current directory  : C:/Users/alexs/Desktop/2026-2027/453/ENEL453/lab3/Lab3.runs/impl_1
 # Command line       : vivado.exe -log lab_3_top_level.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source lab_3_top_level.tcl -notrace
 # Log file           : C:/Users/alexs/Desktop/2026-2027/453/ENEL453/lab3/Lab3.runs/impl_1/lab_3_top_level.vdi
@@ -19,6 +19,6 @@
 # Host memory        : 33412 MB
 # Swap memory        : 25769 MB
 # Total Virtual      : 59182 MB
-# Available Virtual  : 24639 MB
+# Available Virtual  : 33726 MB
 #-----------------------------------------------------------
 source lab_3_top_level.tcl -notrace

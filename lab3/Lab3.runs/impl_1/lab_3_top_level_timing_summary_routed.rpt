@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Fri Oct  9 00:58:50 2026
+| Date         : Fri Oct  9 10:34:16 2026
 | Host         : TheLaptop running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file lab_3_top_level_timing_summary_routed.rpt -pb lab_3_top_level_timing_summary_routed.pb -rpx lab_3_top_level_timing_summary_routed.rpx -warn_on_violation
 | Design       : lab_3_top_level
@@ -1425,11 +1425,11 @@ Max Delay Paths
 Slack:                    inf
   Source:                 select
                             (input port)
-  Destination:            cc
+  Destination:            cg
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        13.820ns  (logic 5.713ns (41.337%)  route 8.107ns (58.663%))
+  Data Path Delay:        14.019ns  (logic 5.714ns (40.762%)  route 8.304ns (59.238%))
   Logic Levels:           6  (IBUF=1 LUT4=1 LUT6=3 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1437,17 +1437,46 @@ Slack:                    inf
     T18                                               0.000     0.000 r  select (IN)
                          net (fo=0)                   0.000     0.000    select
     T18                  IBUF (Prop_ibuf_I_O)         1.454     1.454 r  select_IBUF_inst/O
-                         net (fo=16, routed)          3.053     4.507    BIN_LIVE/select_IBUF
-    SLICE_X50Y17         LUT6 (Prop_lut6_I4_O)        0.124     4.631 r  BIN_LIVE/time_digit__2_i_5/O
-                         net (fo=1, routed)           0.937     5.568    BIN_LIVE/data1[3]
-    SLICE_X52Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.692 r  BIN_LIVE/time_digit__2_i_2/O
-                         net (fo=1, routed)           0.813     6.506    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_5
-    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.630 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
-                         net (fo=7, routed)           1.181     7.810    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.150     7.960 r  SUBSYSTEM/DIGIT_SELECTOR/cc_OBUF_inst_i_1/O
-                         net (fo=1, routed)           2.123    10.083    cc_OBUF
-    U8                   OBUF (Prop_obuf_I_O)         3.737    13.820 r  cc_OBUF_inst/O
-                         net (fo=0)                   0.000    13.820    cc
+                         net (fo=16, routed)          3.502     4.955    BIN_LIVE/select_IBUF
+    SLICE_X50Y20         LUT6 (Prop_lut6_I4_O)        0.124     5.079 r  BIN_LIVE/time_digit__0_i_4/O
+                         net (fo=1, routed)           0.500     5.579    BIN_LIVE/data2[1]
+    SLICE_X51Y20         LUT6 (Prop_lut6_I3_O)        0.124     5.703 r  BIN_LIVE/time_digit__0_i_2/O
+                         net (fo=1, routed)           0.806     6.509    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_3
+    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.633 r  SUBSYSTEM/DIGIT_MUX/time_digit__0/O
+                         net (fo=7, routed)           1.338     7.971    SUBSYSTEM/DIGIT_SELECTOR/sel0[1]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I0_O)        0.154     8.125 r  SUBSYSTEM/DIGIT_SELECTOR/cg_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.159    10.284    cg_OBUF
+    U7                   OBUF (Prop_obuf_I_O)         3.734    14.019 r  cg_OBUF_inst/O
+                         net (fo=0)                   0.000    14.019    cg
+    U7                                                                r  cg (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 select
+                            (input port)
+  Destination:            cc
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.810ns  (logic 5.713ns (41.369%)  route 8.097ns (58.631%))
+  Logic Levels:           6  (IBUF=1 LUT4=1 LUT6=3 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T18                                               0.000     0.000 r  select (IN)
+                         net (fo=0)                   0.000     0.000    select
+    T18                  IBUF (Prop_ibuf_I_O)         1.454     1.454 r  select_IBUF_inst/O
+                         net (fo=16, routed)          3.043     4.497    BIN_LIVE/select_IBUF
+    SLICE_X50Y17         LUT6 (Prop_lut6_I4_O)        0.124     4.621 r  BIN_LIVE/time_digit__2_i_5/O
+                         net (fo=1, routed)           0.937     5.558    BIN_LIVE/data1[3]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.682 r  BIN_LIVE/time_digit__2_i_2/O
+                         net (fo=1, routed)           0.813     6.495    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_5
+    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.619 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
+                         net (fo=7, routed)           1.181     7.800    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.150     7.950 r  SUBSYSTEM/DIGIT_SELECTOR/cc_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.123    10.073    cc_OBUF
+    U8                   OBUF (Prop_obuf_I_O)         3.737    13.810 r  cc_OBUF_inst/O
+                         net (fo=0)                   0.000    13.810    cc
     U8                                                                r  cc (OUT)
   -------------------------------------------------------------------    -------------------
 
@@ -1458,7 +1487,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        13.765ns  (logic 5.706ns (41.451%)  route 8.059ns (58.549%))
+  Data Path Delay:        13.754ns  (logic 5.706ns (41.482%)  route 8.049ns (58.518%))
   Logic Levels:           6  (IBUF=1 LUT4=1 LUT6=3 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1466,76 +1495,18 @@ Slack:                    inf
     T18                                               0.000     0.000 r  select (IN)
                          net (fo=0)                   0.000     0.000    select
     T18                  IBUF (Prop_ibuf_I_O)         1.454     1.454 r  select_IBUF_inst/O
-                         net (fo=16, routed)          3.053     4.507    BIN_LIVE/select_IBUF
-    SLICE_X50Y17         LUT6 (Prop_lut6_I4_O)        0.124     4.631 f  BIN_LIVE/time_digit__2_i_5/O
-                         net (fo=1, routed)           0.937     5.568    BIN_LIVE/data1[3]
-    SLICE_X52Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.692 f  BIN_LIVE/time_digit__2_i_2/O
-                         net (fo=1, routed)           0.813     6.506    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_5
-    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.630 f  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
-                         net (fo=7, routed)           1.186     7.815    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.152     7.967 r  SUBSYSTEM/DIGIT_SELECTOR/ce_OBUF_inst_i_1/O
-                         net (fo=1, routed)           2.070    10.037    ce_OBUF
-    U5                   OBUF (Prop_obuf_I_O)         3.728    13.765 r  ce_OBUF_inst/O
-                         net (fo=0)                   0.000    13.765    ce
+                         net (fo=16, routed)          3.043     4.497    BIN_LIVE/select_IBUF
+    SLICE_X50Y17         LUT6 (Prop_lut6_I4_O)        0.124     4.621 f  BIN_LIVE/time_digit__2_i_5/O
+                         net (fo=1, routed)           0.937     5.558    BIN_LIVE/data1[3]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.682 f  BIN_LIVE/time_digit__2_i_2/O
+                         net (fo=1, routed)           0.813     6.495    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_5
+    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.619 f  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
+                         net (fo=7, routed)           1.186     7.805    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.152     7.957 r  SUBSYSTEM/DIGIT_SELECTOR/ce_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.070    10.027    ce_OBUF
+    U5                   OBUF (Prop_obuf_I_O)         3.728    13.754 r  ce_OBUF_inst/O
+                         net (fo=0)                   0.000    13.754    ce
     U5                                                                r  ce (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 select
-                            (input port)
-  Destination:            cg
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        13.593ns  (logic 5.713ns (42.031%)  route 7.880ns (57.969%))
-  Logic Levels:           6  (IBUF=1 LUT4=1 LUT6=3 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T18                                               0.000     0.000 r  select (IN)
-                         net (fo=0)                   0.000     0.000    select
-    T18                  IBUF (Prop_ibuf_I_O)         1.454     1.454 r  select_IBUF_inst/O
-                         net (fo=16, routed)          3.053     4.507    BIN_LIVE/select_IBUF
-    SLICE_X50Y17         LUT6 (Prop_lut6_I4_O)        0.124     4.631 r  BIN_LIVE/time_digit__2_i_5/O
-                         net (fo=1, routed)           0.937     5.568    BIN_LIVE/data1[3]
-    SLICE_X52Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.692 r  BIN_LIVE/time_digit__2_i_2/O
-                         net (fo=1, routed)           0.813     6.506    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_5
-    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.630 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
-                         net (fo=7, routed)           0.917     7.546    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.153     7.699 r  SUBSYSTEM/DIGIT_SELECTOR/cg_OBUF_inst_i_1/O
-                         net (fo=1, routed)           2.159     9.858    cg_OBUF
-    U7                   OBUF (Prop_obuf_I_O)         3.734    13.593 r  cg_OBUF_inst/O
-                         net (fo=0)                   0.000    13.593    cg
-    U7                                                                r  cg (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 select
-                            (input port)
-  Destination:            cd
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        13.536ns  (logic 5.485ns (40.523%)  route 8.051ns (59.477%))
-  Logic Levels:           6  (IBUF=1 LUT4=1 LUT6=3 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T18                                               0.000     0.000 r  select (IN)
-                         net (fo=0)                   0.000     0.000    select
-    T18                  IBUF (Prop_ibuf_I_O)         1.454     1.454 r  select_IBUF_inst/O
-                         net (fo=16, routed)          3.053     4.507    BIN_LIVE/select_IBUF
-    SLICE_X50Y17         LUT6 (Prop_lut6_I4_O)        0.124     4.631 r  BIN_LIVE/time_digit__2_i_5/O
-                         net (fo=1, routed)           0.937     5.568    BIN_LIVE/data1[3]
-    SLICE_X52Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.692 r  BIN_LIVE/time_digit__2_i_2/O
-                         net (fo=1, routed)           0.813     6.506    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_5
-    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.630 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
-                         net (fo=7, routed)           1.186     7.815    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.124     7.939 r  SUBSYSTEM/DIGIT_SELECTOR/cd_OBUF_inst_i_1/O
-                         net (fo=1, routed)           2.062    10.001    cd_OBUF
-    V8                   OBUF (Prop_obuf_I_O)         3.536    13.536 r  cd_OBUF_inst/O
-                         net (fo=0)                   0.000    13.536    cd
-    V8                                                                r  cd (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -1545,7 +1516,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        13.508ns  (logic 5.460ns (40.422%)  route 8.048ns (59.578%))
+  Data Path Delay:        13.722ns  (logic 5.460ns (39.793%)  route 8.262ns (60.207%))
   Logic Levels:           6  (IBUF=1 LUT4=1 LUT6=3 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1553,47 +1524,18 @@ Slack:                    inf
     T18                                               0.000     0.000 r  select (IN)
                          net (fo=0)                   0.000     0.000    select
     T18                  IBUF (Prop_ibuf_I_O)         1.454     1.454 r  select_IBUF_inst/O
-                         net (fo=16, routed)          3.196     4.650    BIN_LIVE/select_IBUF
-    SLICE_X52Y20         LUT6 (Prop_lut6_I4_O)        0.124     4.774 r  BIN_LIVE/time_digit_i_4/O
-                         net (fo=1, routed)           0.796     5.570    BIN_LIVE/data2[0]
-    SLICE_X52Y19         LUT6 (Prop_lut6_I3_O)        0.124     5.694 r  BIN_LIVE/time_digit_i_2/O
-                         net (fo=1, routed)           0.812     6.507    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_2
-    SLICE_X52Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.631 r  SUBSYSTEM/DIGIT_MUX/time_digit/O
-                         net (fo=7, routed)           1.132     7.762    SUBSYSTEM/DIGIT_SELECTOR/sel0[0]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I0_O)        0.124     7.886 r  SUBSYSTEM/DIGIT_SELECTOR/ca_OBUF_inst_i_1/O
-                         net (fo=1, routed)           2.112     9.998    ca_OBUF
-    W7                   OBUF (Prop_obuf_I_O)         3.511    13.508 r  ca_OBUF_inst/O
-                         net (fo=0)                   0.000    13.508    ca
+                         net (fo=16, routed)          3.502     4.955    BIN_LIVE/select_IBUF
+    SLICE_X50Y20         LUT6 (Prop_lut6_I4_O)        0.124     5.079 r  BIN_LIVE/time_digit__0_i_4/O
+                         net (fo=1, routed)           0.500     5.579    BIN_LIVE/data2[1]
+    SLICE_X51Y20         LUT6 (Prop_lut6_I3_O)        0.124     5.703 r  BIN_LIVE/time_digit__0_i_2/O
+                         net (fo=1, routed)           0.806     6.509    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_3
+    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.633 r  SUBSYSTEM/DIGIT_MUX/time_digit__0/O
+                         net (fo=7, routed)           1.343     7.976    SUBSYSTEM/DIGIT_SELECTOR/sel0[1]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I1_O)        0.124     8.100 r  SUBSYSTEM/DIGIT_SELECTOR/ca_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.112    10.212    ca_OBUF
+    W7                   OBUF (Prop_obuf_I_O)         3.511    13.722 r  ca_OBUF_inst/O
+                         net (fo=0)                   0.000    13.722    ca
     W7                                                                r  ca (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 select
-                            (input port)
-  Destination:            cb
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        13.445ns  (logic 5.479ns (40.749%)  route 7.967ns (59.251%))
-  Logic Levels:           6  (IBUF=1 LUT4=1 LUT6=3 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    T18                                               0.000     0.000 r  select (IN)
-                         net (fo=0)                   0.000     0.000    select
-    T18                  IBUF (Prop_ibuf_I_O)         1.454     1.454 r  select_IBUF_inst/O
-                         net (fo=16, routed)          3.053     4.507    BIN_LIVE/select_IBUF
-    SLICE_X50Y17         LUT6 (Prop_lut6_I4_O)        0.124     4.631 r  BIN_LIVE/time_digit__2_i_5/O
-                         net (fo=1, routed)           0.937     5.568    BIN_LIVE/data1[3]
-    SLICE_X52Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.692 r  BIN_LIVE/time_digit__2_i_2/O
-                         net (fo=1, routed)           0.813     6.506    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_5
-    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.630 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
-                         net (fo=7, routed)           1.181     7.810    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.124     7.934 r  SUBSYSTEM/DIGIT_SELECTOR/cb_OBUF_inst_i_1/O
-                         net (fo=1, routed)           1.982     9.916    cb_OBUF
-    W6                   OBUF (Prop_obuf_I_O)         3.529    13.445 r  cb_OBUF_inst/O
-                         net (fo=0)                   0.000    13.445    cb
-    W6                                                                r  cb (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -1603,7 +1545,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        13.239ns  (logic 5.454ns (41.198%)  route 7.785ns (58.802%))
+  Data Path Delay:        13.653ns  (logic 5.454ns (39.948%)  route 8.199ns (60.052%))
   Logic Levels:           6  (IBUF=1 LUT4=1 LUT6=3 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1611,18 +1553,76 @@ Slack:                    inf
     T18                                               0.000     0.000 r  select (IN)
                          net (fo=0)                   0.000     0.000    select
     T18                  IBUF (Prop_ibuf_I_O)         1.454     1.454 r  select_IBUF_inst/O
-                         net (fo=16, routed)          3.196     4.650    BIN_LIVE/select_IBUF
-    SLICE_X52Y20         LUT6 (Prop_lut6_I4_O)        0.124     4.774 r  BIN_LIVE/time_digit_i_4/O
-                         net (fo=1, routed)           0.796     5.570    BIN_LIVE/data2[0]
-    SLICE_X52Y19         LUT6 (Prop_lut6_I3_O)        0.124     5.694 r  BIN_LIVE/time_digit_i_2/O
-                         net (fo=1, routed)           0.812     6.507    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_2
-    SLICE_X52Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.631 r  SUBSYSTEM/DIGIT_MUX/time_digit/O
-                         net (fo=7, routed)           0.926     7.557    SUBSYSTEM/DIGIT_SELECTOR/sel0[0]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I1_O)        0.124     7.681 r  SUBSYSTEM/DIGIT_SELECTOR/cf_OBUF_inst_i_1/O
-                         net (fo=1, routed)           2.054     9.735    cf_OBUF
-    V5                   OBUF (Prop_obuf_I_O)         3.504    13.239 r  cf_OBUF_inst/O
-                         net (fo=0)                   0.000    13.239    cf
+                         net (fo=16, routed)          3.502     4.955    BIN_LIVE/select_IBUF
+    SLICE_X50Y20         LUT6 (Prop_lut6_I4_O)        0.124     5.079 r  BIN_LIVE/time_digit__0_i_4/O
+                         net (fo=1, routed)           0.500     5.579    BIN_LIVE/data2[1]
+    SLICE_X51Y20         LUT6 (Prop_lut6_I3_O)        0.124     5.703 r  BIN_LIVE/time_digit__0_i_2/O
+                         net (fo=1, routed)           0.806     6.509    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_3
+    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.633 r  SUBSYSTEM/DIGIT_MUX/time_digit__0/O
+                         net (fo=7, routed)           1.338     7.971    SUBSYSTEM/DIGIT_SELECTOR/sel0[1]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I0_O)        0.124     8.095 r  SUBSYSTEM/DIGIT_SELECTOR/cf_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.054    10.149    cf_OBUF
+    V5                   OBUF (Prop_obuf_I_O)         3.504    13.653 r  cf_OBUF_inst/O
+                         net (fo=0)                   0.000    13.653    cf
     V5                                                                r  cf (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 select
+                            (input port)
+  Destination:            cd
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.526ns  (logic 5.485ns (40.555%)  route 8.040ns (59.445%))
+  Logic Levels:           6  (IBUF=1 LUT4=1 LUT6=3 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T18                                               0.000     0.000 r  select (IN)
+                         net (fo=0)                   0.000     0.000    select
+    T18                  IBUF (Prop_ibuf_I_O)         1.454     1.454 r  select_IBUF_inst/O
+                         net (fo=16, routed)          3.043     4.497    BIN_LIVE/select_IBUF
+    SLICE_X50Y17         LUT6 (Prop_lut6_I4_O)        0.124     4.621 r  BIN_LIVE/time_digit__2_i_5/O
+                         net (fo=1, routed)           0.937     5.558    BIN_LIVE/data1[3]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.682 r  BIN_LIVE/time_digit__2_i_2/O
+                         net (fo=1, routed)           0.813     6.495    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_5
+    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.619 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
+                         net (fo=7, routed)           1.186     7.805    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.124     7.929 r  SUBSYSTEM/DIGIT_SELECTOR/cd_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.062     9.990    cd_OBUF
+    V8                   OBUF (Prop_obuf_I_O)         3.536    13.526 r  cd_OBUF_inst/O
+                         net (fo=0)                   0.000    13.526    cd
+    V8                                                                r  cd (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 select
+                            (input port)
+  Destination:            cb
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.435ns  (logic 5.479ns (40.781%)  route 7.956ns (59.219%))
+  Logic Levels:           6  (IBUF=1 LUT4=1 LUT6=3 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T18                                               0.000     0.000 r  select (IN)
+                         net (fo=0)                   0.000     0.000    select
+    T18                  IBUF (Prop_ibuf_I_O)         1.454     1.454 r  select_IBUF_inst/O
+                         net (fo=16, routed)          3.043     4.497    BIN_LIVE/select_IBUF
+    SLICE_X50Y17         LUT6 (Prop_lut6_I4_O)        0.124     4.621 r  BIN_LIVE/time_digit__2_i_5/O
+                         net (fo=1, routed)           0.937     5.558    BIN_LIVE/data1[3]
+    SLICE_X52Y19         LUT6 (Prop_lut6_I5_O)        0.124     5.682 r  BIN_LIVE/time_digit__2_i_2/O
+                         net (fo=1, routed)           0.813     6.495    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_5
+    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     6.619 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
+                         net (fo=7, routed)           1.181     7.800    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.124     7.924 r  SUBSYSTEM/DIGIT_SELECTOR/cb_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.982     9.906    cb_OBUF
+    W6                   OBUF (Prop_obuf_I_O)         3.529    13.435 r  cb_OBUF_inst/O
+                         net (fo=0)                   0.000    13.435    cb
+    W6                                                                r  cb (OUT)
   -------------------------------------------------------------------    -------------------
 
 
@@ -1638,7 +1638,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        3.763ns  (logic 1.560ns (41.447%)  route 2.204ns (58.553%))
+  Data Path Delay:        3.729ns  (logic 1.560ns (41.831%)  route 2.169ns (58.169%))
   Logic Levels:           5  (IBUF=1 LUT4=1 LUT6=2 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1646,15 +1646,15 @@ Slack:                    inf
     T17                                               0.000     0.000 r  source_select (IN)
                          net (fo=0)                   0.000     0.000    source_select
     T17                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  source_select_IBUF_inst/O
-                         net (fo=16, routed)          1.297     1.516    BIN_LIVE/source_select_IBUF
-    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.561 r  BIN_LIVE/time_digit__2_i_1/O
-                         net (fo=1, routed)           0.052     1.613    SUBSYSTEM/DIGIT_MUX/data3[3]
-    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.658 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
-                         net (fo=7, routed)           0.327     1.985    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.045     2.030 r  SUBSYSTEM/DIGIT_SELECTOR/cf_OBUF_inst_i_1/O
-                         net (fo=1, routed)           0.528     2.558    cf_OBUF
-    V5                   OBUF (Prop_obuf_I_O)         1.206     3.763 r  cf_OBUF_inst/O
-                         net (fo=0)                   0.000     3.763    cf
+                         net (fo=16, routed)          1.262     1.482    BIN_LIVE/source_select_IBUF
+    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.527 r  BIN_LIVE/time_digit__2_i_1/O
+                         net (fo=1, routed)           0.052     1.579    SUBSYSTEM/DIGIT_MUX/data3[3]
+    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.624 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
+                         net (fo=7, routed)           0.327     1.950    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.045     1.995 r  SUBSYSTEM/DIGIT_SELECTOR/cf_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.528     2.523    cf_OBUF
+    V5                   OBUF (Prop_obuf_I_O)         1.206     3.729 r  cf_OBUF_inst/O
+                         net (fo=0)                   0.000     3.729    cf
     V5                                                                r  cf (OUT)
   -------------------------------------------------------------------    -------------------
 
@@ -1665,7 +1665,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        3.801ns  (logic 1.566ns (41.198%)  route 2.235ns (58.802%))
+  Data Path Delay:        3.767ns  (logic 1.566ns (41.576%)  route 2.201ns (58.424%))
   Logic Levels:           5  (IBUF=1 LUT4=1 LUT6=2 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1673,15 +1673,15 @@ Slack:                    inf
     T17                                               0.000     0.000 r  source_select (IN)
                          net (fo=0)                   0.000     0.000    source_select
     T17                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  source_select_IBUF_inst/O
-                         net (fo=16, routed)          1.297     1.516    BIN_LIVE/source_select_IBUF
-    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.561 r  BIN_LIVE/time_digit__2_i_1/O
-                         net (fo=1, routed)           0.052     1.613    SUBSYSTEM/DIGIT_MUX/data3[3]
-    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.658 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
-                         net (fo=7, routed)           0.328     1.986    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.045     2.031 r  SUBSYSTEM/DIGIT_SELECTOR/ca_OBUF_inst_i_1/O
-                         net (fo=1, routed)           0.559     2.590    ca_OBUF
-    W7                   OBUF (Prop_obuf_I_O)         1.212     3.801 r  ca_OBUF_inst/O
-                         net (fo=0)                   0.000     3.801    ca
+                         net (fo=16, routed)          1.262     1.482    BIN_LIVE/source_select_IBUF
+    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.527 r  BIN_LIVE/time_digit__2_i_1/O
+                         net (fo=1, routed)           0.052     1.579    SUBSYSTEM/DIGIT_MUX/data3[3]
+    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.624 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
+                         net (fo=7, routed)           0.328     1.951    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.045     1.996 r  SUBSYSTEM/DIGIT_SELECTOR/ca_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.559     2.555    ca_OBUF
+    W7                   OBUF (Prop_obuf_I_O)         1.212     3.767 r  ca_OBUF_inst/O
+                         net (fo=0)                   0.000     3.767    ca
     W7                                                                r  ca (OUT)
   -------------------------------------------------------------------    -------------------
 
@@ -1692,7 +1692,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        3.867ns  (logic 1.584ns (40.969%)  route 2.283ns (59.031%))
+  Data Path Delay:        3.833ns  (logic 1.584ns (41.339%)  route 2.248ns (58.661%))
   Logic Levels:           5  (IBUF=1 LUT4=1 LUT6=2 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1700,15 +1700,15 @@ Slack:                    inf
     T17                                               0.000     0.000 r  source_select (IN)
                          net (fo=0)                   0.000     0.000    source_select
     T17                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  source_select_IBUF_inst/O
-                         net (fo=16, routed)          1.297     1.516    BIN_LIVE/source_select_IBUF
-    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.561 r  BIN_LIVE/time_digit__2_i_1/O
-                         net (fo=1, routed)           0.052     1.613    SUBSYSTEM/DIGIT_MUX/data3[3]
-    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.658 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
-                         net (fo=7, routed)           0.419     2.077    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.045     2.122 r  SUBSYSTEM/DIGIT_SELECTOR/cb_OBUF_inst_i_1/O
-                         net (fo=1, routed)           0.515     2.637    cb_OBUF
-    W6                   OBUF (Prop_obuf_I_O)         1.230     3.867 r  cb_OBUF_inst/O
-                         net (fo=0)                   0.000     3.867    cb
+                         net (fo=16, routed)          1.262     1.482    BIN_LIVE/source_select_IBUF
+    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.527 r  BIN_LIVE/time_digit__2_i_1/O
+                         net (fo=1, routed)           0.052     1.579    SUBSYSTEM/DIGIT_MUX/data3[3]
+    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.624 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
+                         net (fo=7, routed)           0.419     2.042    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.045     2.087 r  SUBSYSTEM/DIGIT_SELECTOR/cb_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.515     2.602    cb_OBUF
+    W6                   OBUF (Prop_obuf_I_O)         1.230     3.833 r  cb_OBUF_inst/O
+                         net (fo=0)                   0.000     3.833    cb
     W6                                                                r  cb (OUT)
   -------------------------------------------------------------------    -------------------
 
@@ -1719,7 +1719,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        3.882ns  (logic 1.591ns (40.978%)  route 2.291ns (59.022%))
+  Data Path Delay:        3.847ns  (logic 1.591ns (41.346%)  route 2.257ns (58.654%))
   Logic Levels:           5  (IBUF=1 LUT4=1 LUT6=2 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1727,15 +1727,15 @@ Slack:                    inf
     T17                                               0.000     0.000 r  source_select (IN)
                          net (fo=0)                   0.000     0.000    source_select
     T17                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  source_select_IBUF_inst/O
-                         net (fo=16, routed)          1.297     1.516    BIN_LIVE/source_select_IBUF
-    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.561 r  BIN_LIVE/time_digit__2_i_1/O
-                         net (fo=1, routed)           0.052     1.613    SUBSYSTEM/DIGIT_MUX/data3[3]
-    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.658 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
-                         net (fo=7, routed)           0.421     2.079    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.045     2.124 r  SUBSYSTEM/DIGIT_SELECTOR/cd_OBUF_inst_i_1/O
-                         net (fo=1, routed)           0.522     2.645    cd_OBUF
-    V8                   OBUF (Prop_obuf_I_O)         1.236     3.882 r  cd_OBUF_inst/O
-                         net (fo=0)                   0.000     3.882    cd
+                         net (fo=16, routed)          1.262     1.482    BIN_LIVE/source_select_IBUF
+    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.527 r  BIN_LIVE/time_digit__2_i_1/O
+                         net (fo=1, routed)           0.052     1.579    SUBSYSTEM/DIGIT_MUX/data3[3]
+    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.624 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
+                         net (fo=7, routed)           0.421     2.044    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.045     2.089 r  SUBSYSTEM/DIGIT_SELECTOR/cd_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.522     2.611    cd_OBUF
+    V8                   OBUF (Prop_obuf_I_O)         1.236     3.847 r  cd_OBUF_inst/O
+                         net (fo=0)                   0.000     3.847    cd
     V8                                                                r  cd (OUT)
   -------------------------------------------------------------------    -------------------
 
@@ -1746,7 +1746,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        3.909ns  (logic 1.652ns (42.246%)  route 2.258ns (57.754%))
+  Data Path Delay:        3.875ns  (logic 1.652ns (42.623%)  route 2.223ns (57.377%))
   Logic Levels:           5  (IBUF=1 LUT4=1 LUT6=2 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1754,15 +1754,15 @@ Slack:                    inf
     T17                                               0.000     0.000 r  source_select (IN)
                          net (fo=0)                   0.000     0.000    source_select
     T17                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  source_select_IBUF_inst/O
-                         net (fo=16, routed)          1.297     1.516    BIN_LIVE/source_select_IBUF
-    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.561 r  BIN_LIVE/time_digit__2_i_1/O
-                         net (fo=1, routed)           0.052     1.613    SUBSYSTEM/DIGIT_MUX/data3[3]
-    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.658 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
-                         net (fo=7, routed)           0.327     1.985    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.045     2.030 r  SUBSYSTEM/DIGIT_SELECTOR/cg_OBUF_inst_i_1/O
-                         net (fo=1, routed)           0.582     2.612    cg_OBUF
-    U7                   OBUF (Prop_obuf_I_O)         1.297     3.909 r  cg_OBUF_inst/O
-                         net (fo=0)                   0.000     3.909    cg
+                         net (fo=16, routed)          1.262     1.482    BIN_LIVE/source_select_IBUF
+    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.527 r  BIN_LIVE/time_digit__2_i_1/O
+                         net (fo=1, routed)           0.052     1.579    SUBSYSTEM/DIGIT_MUX/data3[3]
+    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.624 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
+                         net (fo=7, routed)           0.327     1.950    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.045     1.995 r  SUBSYSTEM/DIGIT_SELECTOR/cg_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.582     2.578    cg_OBUF
+    U7                   OBUF (Prop_obuf_I_O)         1.297     3.875 r  cg_OBUF_inst/O
+                         net (fo=0)                   0.000     3.875    cg
     U7                                                                r  cg (OUT)
   -------------------------------------------------------------------    -------------------
 
@@ -1773,7 +1773,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        3.935ns  (logic 1.640ns (41.685%)  route 2.295ns (58.315%))
+  Data Path Delay:        3.900ns  (logic 1.640ns (42.054%)  route 2.260ns (57.946%))
   Logic Levels:           5  (IBUF=1 LUT4=1 LUT6=2 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1781,15 +1781,15 @@ Slack:                    inf
     T17                                               0.000     0.000 r  source_select (IN)
                          net (fo=0)                   0.000     0.000    source_select
     T17                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  source_select_IBUF_inst/O
-                         net (fo=16, routed)          1.297     1.516    BIN_LIVE/source_select_IBUF
-    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.561 f  BIN_LIVE/time_digit__2_i_1/O
-                         net (fo=1, routed)           0.052     1.613    SUBSYSTEM/DIGIT_MUX/data3[3]
-    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.658 f  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
-                         net (fo=7, routed)           0.421     2.079    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.043     2.122 r  SUBSYSTEM/DIGIT_SELECTOR/ce_OBUF_inst_i_1/O
-                         net (fo=1, routed)           0.525     2.647    ce_OBUF
-    U5                   OBUF (Prop_obuf_I_O)         1.288     3.935 r  ce_OBUF_inst/O
-                         net (fo=0)                   0.000     3.935    ce
+                         net (fo=16, routed)          1.262     1.482    BIN_LIVE/source_select_IBUF
+    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.527 f  BIN_LIVE/time_digit__2_i_1/O
+                         net (fo=1, routed)           0.052     1.579    SUBSYSTEM/DIGIT_MUX/data3[3]
+    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.624 f  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
+                         net (fo=7, routed)           0.421     2.044    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.043     2.087 r  SUBSYSTEM/DIGIT_SELECTOR/ce_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.525     2.612    ce_OBUF
+    U5                   OBUF (Prop_obuf_I_O)         1.288     3.900 r  ce_OBUF_inst/O
+                         net (fo=0)                   0.000     3.900    ce
     U5                                                                r  ce (OUT)
   -------------------------------------------------------------------    -------------------
 
@@ -1800,7 +1800,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        3.970ns  (logic 1.649ns (41.545%)  route 2.321ns (58.455%))
+  Data Path Delay:        3.935ns  (logic 1.649ns (41.910%)  route 2.286ns (58.090%))
   Logic Levels:           5  (IBUF=1 LUT4=1 LUT6=2 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1808,15 +1808,15 @@ Slack:                    inf
     T17                                               0.000     0.000 r  source_select (IN)
                          net (fo=0)                   0.000     0.000    source_select
     T17                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  source_select_IBUF_inst/O
-                         net (fo=16, routed)          1.297     1.516    BIN_LIVE/source_select_IBUF
-    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.561 r  BIN_LIVE/time_digit__2_i_1/O
-                         net (fo=1, routed)           0.052     1.613    SUBSYSTEM/DIGIT_MUX/data3[3]
-    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.658 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
-                         net (fo=7, routed)           0.419     2.077    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.042     2.119 r  SUBSYSTEM/DIGIT_SELECTOR/cc_OBUF_inst_i_1/O
-                         net (fo=1, routed)           0.553     2.672    cc_OBUF
-    U8                   OBUF (Prop_obuf_I_O)         1.298     3.970 r  cc_OBUF_inst/O
-                         net (fo=0)                   0.000     3.970    cc
+                         net (fo=16, routed)          1.262     1.482    BIN_LIVE/source_select_IBUF
+    SLICE_X53Y21         LUT6 (Prop_lut6_I3_O)        0.045     1.527 r  BIN_LIVE/time_digit__2_i_1/O
+                         net (fo=1, routed)           0.052     1.579    SUBSYSTEM/DIGIT_MUX/data3[3]
+    SLICE_X53Y21         LUT6 (Prop_lut6_I4_O)        0.045     1.624 r  SUBSYSTEM/DIGIT_MUX/time_digit__2/O
+                         net (fo=7, routed)           0.419     2.042    SUBSYSTEM/DIGIT_SELECTOR/sel0[3]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I3_O)        0.042     2.084 r  SUBSYSTEM/DIGIT_SELECTOR/cc_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.553     2.637    cc_OBUF
+    U8                   OBUF (Prop_obuf_I_O)         1.298     3.935 r  cc_OBUF_inst/O
+                         net (fo=0)                   0.000     3.935    cc
     U8                                                                r  cc (OUT)
   -------------------------------------------------------------------    -------------------
 
@@ -1843,7 +1843,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        11.191ns  (logic 4.716ns (42.144%)  route 6.475ns (57.856%))
+  Data Path Delay:        11.196ns  (logic 4.716ns (42.126%)  route 6.480ns (57.874%))
   Logic Levels:           5  (LUT4=1 LUT6=3 OBUF=1)
   Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.050ns
@@ -1864,17 +1864,17 @@ Slack:                    inf
     SLICE_X48Y12         FDRE                                         r  SYNCHRONIZER/switches_outputs_reg[10]/C
   -------------------------------------------------------------------    -------------------
     SLICE_X48Y12         FDRE (Prop_fdre_C_Q)         0.456     5.543 r  SYNCHRONIZER/switches_outputs_reg[10]/Q
-                         net (fo=4, routed)           1.366     6.909    BIN_LIVE/Q[5]
-    SLICE_X50Y19         LUT6 (Prop_lut6_I1_O)        0.124     7.033 r  BIN_LIVE/time_digit__0_i_5/O
-                         net (fo=1, routed)           0.806     7.839    BIN_LIVE/data1[1]
-    SLICE_X51Y20         LUT6 (Prop_lut6_I5_O)        0.124     7.963 r  BIN_LIVE/time_digit__0_i_2/O
-                         net (fo=1, routed)           0.806     8.769    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_3
-    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     8.893 r  SUBSYSTEM/DIGIT_MUX/time_digit__0/O
-                         net (fo=7, routed)           1.338    10.231    SUBSYSTEM/DIGIT_SELECTOR/sel0[1]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I0_O)        0.154    10.385 r  SUBSYSTEM/DIGIT_SELECTOR/cg_OBUF_inst_i_1/O
-                         net (fo=1, routed)           2.159    12.544    cg_OBUF
-    U7                   OBUF (Prop_obuf_I_O)         3.734    16.279 r  cg_OBUF_inst/O
-                         net (fo=0)                   0.000    16.279    cg
+                         net (fo=4, routed)           1.371     6.914    BIN_LIVE/Q[5]
+    SLICE_X50Y19         LUT6 (Prop_lut6_I1_O)        0.124     7.038 r  BIN_LIVE/time_digit__0_i_5/O
+                         net (fo=1, routed)           0.806     7.844    BIN_LIVE/data1[1]
+    SLICE_X51Y20         LUT6 (Prop_lut6_I5_O)        0.124     7.968 r  BIN_LIVE/time_digit__0_i_2/O
+                         net (fo=1, routed)           0.806     8.774    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_3
+    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     8.898 r  SUBSYSTEM/DIGIT_MUX/time_digit__0/O
+                         net (fo=7, routed)           1.338    10.235    SUBSYSTEM/DIGIT_SELECTOR/sel0[1]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I0_O)        0.154    10.389 r  SUBSYSTEM/DIGIT_SELECTOR/cg_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.159    12.549    cg_OBUF
+    U7                   OBUF (Prop_obuf_I_O)         3.734    16.283 r  cg_OBUF_inst/O
+                         net (fo=0)                   0.000    16.283    cg
     U7                                                                r  cg (OUT)
   -------------------------------------------------------------------    -------------------
 
@@ -1969,7 +1969,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        10.895ns  (logic 4.463ns (40.961%)  route 6.432ns (59.039%))
+  Data Path Delay:        10.900ns  (logic 4.463ns (40.944%)  route 6.437ns (59.056%))
   Logic Levels:           5  (LUT4=1 LUT6=3 OBUF=1)
   Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.050ns
@@ -1990,17 +1990,17 @@ Slack:                    inf
     SLICE_X48Y12         FDRE                                         r  SYNCHRONIZER/switches_outputs_reg[10]/C
   -------------------------------------------------------------------    -------------------
     SLICE_X48Y12         FDRE (Prop_fdre_C_Q)         0.456     5.543 r  SYNCHRONIZER/switches_outputs_reg[10]/Q
-                         net (fo=4, routed)           1.366     6.909    BIN_LIVE/Q[5]
-    SLICE_X50Y19         LUT6 (Prop_lut6_I1_O)        0.124     7.033 r  BIN_LIVE/time_digit__0_i_5/O
-                         net (fo=1, routed)           0.806     7.839    BIN_LIVE/data1[1]
-    SLICE_X51Y20         LUT6 (Prop_lut6_I5_O)        0.124     7.963 r  BIN_LIVE/time_digit__0_i_2/O
-                         net (fo=1, routed)           0.806     8.769    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_3
-    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     8.893 r  SUBSYSTEM/DIGIT_MUX/time_digit__0/O
-                         net (fo=7, routed)           1.343    10.236    SUBSYSTEM/DIGIT_SELECTOR/sel0[1]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I1_O)        0.124    10.360 r  SUBSYSTEM/DIGIT_SELECTOR/ca_OBUF_inst_i_1/O
-                         net (fo=1, routed)           2.112    12.472    ca_OBUF
-    W7                   OBUF (Prop_obuf_I_O)         3.511    15.982 r  ca_OBUF_inst/O
-                         net (fo=0)                   0.000    15.982    ca
+                         net (fo=4, routed)           1.371     6.914    BIN_LIVE/Q[5]
+    SLICE_X50Y19         LUT6 (Prop_lut6_I1_O)        0.124     7.038 r  BIN_LIVE/time_digit__0_i_5/O
+                         net (fo=1, routed)           0.806     7.844    BIN_LIVE/data1[1]
+    SLICE_X51Y20         LUT6 (Prop_lut6_I5_O)        0.124     7.968 r  BIN_LIVE/time_digit__0_i_2/O
+                         net (fo=1, routed)           0.806     8.774    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_3
+    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     8.898 r  SUBSYSTEM/DIGIT_MUX/time_digit__0/O
+                         net (fo=7, routed)           1.343    10.240    SUBSYSTEM/DIGIT_SELECTOR/sel0[1]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I1_O)        0.124    10.364 r  SUBSYSTEM/DIGIT_SELECTOR/ca_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.112    12.476    ca_OBUF
+    W7                   OBUF (Prop_obuf_I_O)         3.511    15.987 r  ca_OBUF_inst/O
+                         net (fo=0)                   0.000    15.987    ca
     W7                                                                r  ca (OUT)
   -------------------------------------------------------------------    -------------------
 
@@ -2011,7 +2011,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        10.826ns  (logic 4.456ns (41.164%)  route 6.370ns (58.836%))
+  Data Path Delay:        10.831ns  (logic 4.456ns (41.146%)  route 6.374ns (58.854%))
   Logic Levels:           5  (LUT4=1 LUT6=3 OBUF=1)
   Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.050ns
@@ -2032,17 +2032,17 @@ Slack:                    inf
     SLICE_X48Y12         FDRE                                         r  SYNCHRONIZER/switches_outputs_reg[10]/C
   -------------------------------------------------------------------    -------------------
     SLICE_X48Y12         FDRE (Prop_fdre_C_Q)         0.456     5.543 r  SYNCHRONIZER/switches_outputs_reg[10]/Q
-                         net (fo=4, routed)           1.366     6.909    BIN_LIVE/Q[5]
-    SLICE_X50Y19         LUT6 (Prop_lut6_I1_O)        0.124     7.033 r  BIN_LIVE/time_digit__0_i_5/O
-                         net (fo=1, routed)           0.806     7.839    BIN_LIVE/data1[1]
-    SLICE_X51Y20         LUT6 (Prop_lut6_I5_O)        0.124     7.963 r  BIN_LIVE/time_digit__0_i_2/O
-                         net (fo=1, routed)           0.806     8.769    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_3
-    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     8.893 r  SUBSYSTEM/DIGIT_MUX/time_digit__0/O
-                         net (fo=7, routed)           1.338    10.231    SUBSYSTEM/DIGIT_SELECTOR/sel0[1]
-    SLICE_X57Y19         LUT4 (Prop_lut4_I0_O)        0.124    10.355 r  SUBSYSTEM/DIGIT_SELECTOR/cf_OBUF_inst_i_1/O
-                         net (fo=1, routed)           2.054    12.409    cf_OBUF
-    V5                   OBUF (Prop_obuf_I_O)         3.504    15.913 r  cf_OBUF_inst/O
-                         net (fo=0)                   0.000    15.913    cf
+                         net (fo=4, routed)           1.371     6.914    BIN_LIVE/Q[5]
+    SLICE_X50Y19         LUT6 (Prop_lut6_I1_O)        0.124     7.038 r  BIN_LIVE/time_digit__0_i_5/O
+                         net (fo=1, routed)           0.806     7.844    BIN_LIVE/data1[1]
+    SLICE_X51Y20         LUT6 (Prop_lut6_I5_O)        0.124     7.968 r  BIN_LIVE/time_digit__0_i_2/O
+                         net (fo=1, routed)           0.806     8.774    SUBSYSTEM/DIGIT_MUX/ca_OBUF_inst_i_1_3
+    SLICE_X53Y21         LUT6 (Prop_lut6_I5_O)        0.124     8.898 r  SUBSYSTEM/DIGIT_MUX/time_digit__0/O
+                         net (fo=7, routed)           1.338    10.235    SUBSYSTEM/DIGIT_SELECTOR/sel0[1]
+    SLICE_X57Y19         LUT4 (Prop_lut4_I0_O)        0.124    10.359 r  SUBSYSTEM/DIGIT_SELECTOR/cf_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.054    12.414    cf_OBUF
+    V5                   OBUF (Prop_obuf_I_O)         3.504    15.918 r  cf_OBUF_inst/O
+                         net (fo=0)                   0.000    15.918    cf
     V5                                                                r  cf (OUT)
   -------------------------------------------------------------------    -------------------
 
